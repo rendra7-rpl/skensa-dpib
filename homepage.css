@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.selamat-datang {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.dpib-rawr {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Applying Infinite Scroll to Gallery Container */
+.gallery-container {
+    display: flex;
+    gap: 20px;
+    overflow: hidden; /* Hides content outside container */
+    position: relative;
+    white-space: nowrap; /* Prevents wrapping */
+    animation: infinite-scroll 5s linear infinite;
+}
+
+
+/* Konten utama */
+/* Galeri gambar (menggunakan display flex) */
+.gallery-home-info {
+    display: flex; /* Menyusun gambar secara horizontal */
+    flex-direction: row; /* Menyusun gambar secara berurutan di samping */
+    gap: 20px; /* Jarak antar gambar */
+    justify-content: center; /* Menyusun gambar di tengah */
+    flex-wrap: wrap; /* Agar gambar tetap responsif dan wrap di layar kecil */
+}
+
+/* Setiap item gambar */
+.gallery-page {
+    flex: 1;
+    min-width: 250px; /* Gambar minimum lebar */
+    max-width: 300px; /* Gambar maksimum lebar */
+    border-radius: 8px;
+    overflow: hidden; /* Menjaga gambar agar tidak keluar dari kontainer */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Memberikan efek bayangan ringan */
+    
+}
+.gallery-item {
+    display: inline-block;
+    width: 300px; /* Adjust width based on your image size */
+    margin-right: 20px;
+    flex: none; /* Prevents flex items from growing */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Mengatur posisi dan overlay gelap */
+.gallery-page {
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Efek gelap default pada gambar */
+.gallery-page img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0.6; /* Gelap saat tidak dihover */
+    border-radius: 8px;
+}
+
+/* Efek terang saat gambar dihover */
+.gallery-page:hover img {
+    opacity: 1; /* Menjadi terang */
+    transform: scale(1.05); /* Zoom sedikit */
+}
+
+.logo img {
+    height: 70px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover img {
+    transform: scale(1.1);
+}
+
+nav .nav-link {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link.active {
+    color: #007bff;
+}
+
+.nav-link:hover {
+    color: #0056b3;
+}
+
+.logOut-btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.logOut-btn:hover {
+    color: #fff;
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 650px;
+    background: url('skensajaya.png') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+}
+.profile-kami {
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.profile-text {
+    color: white;
+    -webkit-text-stroke: 1px black; /* Stroke hitam */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan hitam */
+}
+
+.kami-text {
+    color: #D0B67C;
+    -webkit-text-stroke: 1px black; /* Stroke hitam */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan hitam */
+    margin-left: 8px; /* Jarak antara "Profile" dan "Kami" */
+}
+
+.profile-kami::before {
+    content: "Profile";
+    color: white;
+    -webkit-text-stroke: 1px black; /* Stroke hitam */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.profile-kami::after {
+    content: "Kami";
+    color: #D0B67C;
+    -webkit-text-stroke: 1px black; /* Stroke hitam */
+    position: absolute;
+    top: 0;
+    left: calc(100% - 60px); /* Menggeser agar teks "Kami" berdampingan dengan "Profile" */
+    z-index: -1;
+}
+.profile-kami {
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.right-aligned {
+    justify-content: flex-end; /* Memposisikan teks ke paling kanan */
+}
+.info-tentang-dpib {
+    font-size: 26px; /* Ukuran font yang lebih besar */
+    line-height: 1.6; /* Menambah tinggi baris untuk kenyamanan membaca */
+    color: #333; /* Warna teks yang lebih gelap untuk kontras */
+    font-family: Arial, sans-serif; /* Font yang mudah dibaca */
+    max-width: 1000px; /* Membatasi lebar paragraf untuk kenyamanan */
+    margin: 20px auto; /* Mengatur jarak dan membuat paragraf berada di tengah */
+}
+
+.gallery-text {
+    color: white;
+    -webkit-text-stroke: 1px black; /* Stroke hitam */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan hitam */
+}
+
+.kami2-text {
+    color:#D0B67C;
+    -webkit-text-stroke: 1px black; /* Stroke hitam */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan hitam */
+    margin-left: 8px; /* Jarak antara "GALERY" dan "KAMI" */
+}
+
+.p-galerry {
+    text-align: right; /* Memposisikan paragraf ke kanan */
+    font-size: 26px; /* Sesuaikan ukuran teks jika diperlukan */
+    color: #333; /* Warna teks paragraf */
+}
+
+.p-profile {
+    text-align: right; /* Memposisikan paragraf ke kanan */
+    font-size: 26px; /* Sesuaikan ukuran teks jika diperlukan */
+    color: #333; /* Warna teks paragraf */
+}
+.p-prospek-kerja{
+    text-align: center; /* Memposisikan paragraf ke kanan */
+    font-size: 26px; /* Sesuaikan ukuran teks jika diperlukan */
+    color: #333; /* Warna teks paragraf */
+}
+.profile-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.box-informasi {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 10px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Jarak antara gambar dan teks */
+}
+
+.info-item img {
+    width: 323px; /* Atur ukuran gambar sesuai keinginan */
+    height: 273px;
+    border-radius: 8px;
+}
+
+.info-item p {
+    flex: 1; /* Mengatur teks agar mengisi ruang yang tersisa */
+    text-align: left;
+}
+
+.gallery-section {
+    padding: 40px 10%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-container .gallery-item:nth-child(4),
+.gallery-container .gallery-item:nth-child(5) {
+    grid-column: span 1 / span 1;
+}
+/* Gaya untuk h2.prospek-kami */
+.prospek-kami {
+    font-family: Arial, sans-serif; /* Font Arial */
+    font-size: 50px; /* Ukuran font 50px */
+    font-weight: bold; /* Teks tebal */
+    display: flex; /* Menggunakan flexbox untuk penyelarasan */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    justify-content: center; /* Menyelaraskan ke tengah */
+    text-align: center; /* Memastikan teks di dalam elemen ini juga berada di tengah */
+}
+
+/* Gaya untuk teks "PROFILE" */
+.profile-text {
+    color: white; /* Warna teks putih */
+    -webkit-text-stroke: 1px black; /* Stroke hitam */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan hitam */
+}
+
+/* Gaya untuk teks "KAMI" */
+.kami-text {
+    color: #D0B67C; /* Warna teks kuning keemasan */
+    -webkit-text-stroke: 1px black; /* Stroke hitam */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan hitam */
+    margin-left: 8px; /* Jarak antara "PROFILE" dan "KAMI" */
+}
+
+/* Gaya untuk paragraf di bawah h2.prospek-kami */
+.p-prospek {
+    text-align: center; /* Menyelaraskan teks paragraf ke tengah */
+    font-size: 26px; /* Ukuran font yang lebih besar */
+    color: #333; /* Warna teks paragraf */
+    font-family: Arial, sans-serif; /* Font yang mudah dibaca */
+    max-width: 1000px; /* Membatasi lebar paragraf */
+    margin: 20px auto; /* Memberi jarak dan memusatkan paragraf */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 10%;
+    font-size: 1rem;
+}
+
+.footer-bottom p {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 1px;
+    }
+}
+/* Prospek Kerja Styling */
+.prospek-kerja-section {
+    padding: 40px 10%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.prospek-kerja-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.prospek-kerja-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.kerja-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.kerja-item:hover {
+    transform: scale(1.05);
+}
+
+.kerja-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.kerja-item p {
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Responsiveness for Prospek Kerja Section */
+@media (max-width: 768px) {
+    .prospek-kerja-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .prospek-kerja-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
