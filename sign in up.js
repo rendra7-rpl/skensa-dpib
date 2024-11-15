@@ -23,6 +23,6 @@ signInButton.addEventListener('click', (e) => {
     if (!email.endsWith('@gmail.com')) {
         alert("Hanya bisa login dengan akun Gmail.");
     } else {
-        window.location.href = 'homepage.html'; // Ganti dengan URL beranda Anda
+        window.location.href = 'index.html'; // Ganti dengan URL beranda Anda
     }
 });
