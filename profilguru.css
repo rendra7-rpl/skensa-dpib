@@ -3,7 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
 }
 
 header {
@@ -20,7 +25,7 @@ header {
     z-index: 100;
 }
 .logo img {
-    height: 80px;
+    height: 70px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -38,7 +43,7 @@ nav .nav-link {
 }
 
 .nav-link.active {
-    color: #007bff;
+    color: #0056b3;
 }
 
 .nav-link:hover {
@@ -265,6 +270,42 @@ nav .nav-link {
     text-align: center;
 }
 
+/* Apply scale zoom effect on profile cards */
+.profile-group .profile-card1,
+.profile-group .profile-card2,
+.profile-group .profile-card3,
+.profile-group .profile-card4,
+.profile-group .profile-card5,
+.profile-group .profile-card6,
+.profile-group .profile-card7,
+.profile-group .profile-card8,
+.profile-group .profile-card9,
+.profile-group .profile-card10,
+.profile-group .profile-card11,
+.profile-group .profile-card12,
+.profile-group .profile-card13,
+.profile-group .profile-card14 {
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Scale up the cards when hovered */
+.profile-group .profile-card1:hover,
+.profile-group .profile-card2:hover,
+.profile-group .profile-card3:hover,
+.profile-group .profile-card4:hover,
+.profile-group .profile-card5:hover,
+.profile-group .profile-card6:hover,
+.profile-group .profile-card7:hover,
+.profile-group .profile-card8:hover,
+.profile-group .profile-card9:hover,
+.profile-group .profile-card10:hover,
+.profile-group .profile-card11:hover,
+.profile-group .profile-card12:hover,
+.profile-group .profile-card13:hover,
+.profile-group .profile-card14:hover {
+    transform: scale(1.1); /* Zoom in effect */
+}
+
 .profile-group .profile-card1,
 .profile-group .profile-card2,
 .profile-group .profile-card3,
@@ -306,8 +347,8 @@ nav .nav-link {
 .profile-group .profile-card12 img,
 .profile-group .profile-card13 img,
 .profile-group .profile-card14 img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 0%;
     border: 1px solid #333;
     margin-bottom: 10px;
@@ -347,7 +388,7 @@ nav .nav-link {
 
 .footer .social-icons a {
     margin: 0 10px;
-    color: #333;
+    color: #000000;
     text-decoration: none;
     font-size: 20px;
 }
@@ -355,6 +396,7 @@ nav .nav-link {
 .footer .site-link {
     margin-top: 10px;
     font-weight: bold;
+    text-align: flex;
 }
 
 .footer .site-link a {
